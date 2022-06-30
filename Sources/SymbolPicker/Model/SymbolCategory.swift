@@ -79,7 +79,7 @@ extension SymbolCategory {
         case .maths:
             return SFMaths.symbols
         case .all:
-            return SymbolCategory.allCases.flatMap { $0.symbols }
+            return ["cart"]
         }
     }
 }
