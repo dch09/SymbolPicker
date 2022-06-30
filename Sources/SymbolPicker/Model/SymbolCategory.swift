@@ -31,6 +31,8 @@ public enum SymbolCategory: String, Identifiable, CaseIterable {
     case all
 
     public var id: String { rawValue }
+
+    static var allSymbols: [String] = SymbolCategory.allCases.flatMap { $0.symbols }
 }
 
 // MARK: Symbols -
@@ -79,7 +81,7 @@ extension SymbolCategory {
         case .maths:
             return SFMaths.symbols
         case .all:
-            return ["cart"]
+            return SymbolCategory.allSymbols
         }
     }
 }
